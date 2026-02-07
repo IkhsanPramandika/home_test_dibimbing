@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'com.dibimbing'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
+    implementation 'org.testng:testng:7.9.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'io.qameta.allure:allure-testng:2.25.0'
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
+    implementation 'org.seleniumhq.selenium:selenium-devtools-v121:4.18.1'
+}
+
+allure {
+    version = '2.25.0'
+}
+
+test {
+    useTestNG()
+}
